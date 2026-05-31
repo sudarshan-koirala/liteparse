@@ -1,0 +1,39 @@
+{
+  "name": "git-operations",
+  "displayName": "Git Operations",
+  "version": "1.0.0",
+  "description": "Automate git workflows including add, commit, push, and rebase conflict resolution",
+  "author": "Sudarshan Koirala",
+  "main": "implementation.py",
+  "capabilities": [
+    "git-status",
+    "git-add",
+    "git-commit",
+    "git-push",
+    "git-add-commit-push",
+    "git-rebase-continue",
+    "git-abort-rebase",
+    "git-sync-branch",
+    "git-resolve-conflicts"
+  ],
+  "requiredTools": [
+    "bash"
+  ],
+  "configuration": {
+    "auto_detect_conflicts": {
+      "type": "boolean",
+      "default": true,
+      "description": "Automatically detect merge/rebase conflicts"
+    },
+    "default_remote": {
+      "type": "string",
+      "default": "origin",
+      "description": "Default remote name for push/pull operations"
+    },
+    "default_target_branch": {
+      "type": "string",
+      "default": "main",
+      "description": "Default target branch for sync operations"
+    }
+  }
+}
