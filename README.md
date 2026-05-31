@@ -137,6 +137,18 @@ print(f"Saved to {output_path}")
 
 ---
 
+## Claude Code Integration
+
+The liteparse skill can be added to Claude Code for seamless integration with various AI agents. To add the liteparse skill to Claude Code, use:
+
+```bash
+npx skills add run-llama/llamaparse-agent-skills --skill liteparse -a claude-code
+```
+
+This enables Claude Code to leverage liteparse capabilities for parsing documents within your AI workflows.
+
+---
+
 ## CLI Usage
 
 LiteParse ships with a `lit` CLI. Use `uv run lit` to invoke it without activating the virtual environment.
