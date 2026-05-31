@@ -115,24 +115,15 @@ print(result[0])
 ### Save parsed output to a file
 
 ```python
-import os
 from liteparse import LiteParse
 
-pdf_path = "data/attention-is-all-you-need.pdf"
-
 parser = LiteParse()
-result = parser.parse(pdf_path)
+result = parser.parse("data/attention-is-all-you-need.pdf")
 
-output_dir = os.path.join(os.getcwd(), "output_parsed")
-os.makedirs(output_dir, exist_ok=True)
-
-output_filename = os.path.splitext(os.path.basename(pdf_path))[0] + ".md"
-output_path = os.path.join(output_dir, output_filename)
-
-with open(output_path, "w", encoding="utf-8") as f:
+with open("output.md", "w", encoding="utf-8") as f:
     f.write(result.text)
 
-print(f"Saved to {output_path}")
+print("Saved to output.md")
 ```
 
 ---
@@ -162,7 +153,7 @@ uv run lit parse data/attention-is-all-you-need.pdf
 ### Parse and save to a file
 
 ```bash
-uv run lit parse data/attention-is-all-you-need.pdf -o output_parsed/attention.md
+uv run lit parse data/attention-is-all-you-need.pdf -o output.md
 ```
 
 ### Download and parse a PDF in one step
@@ -183,13 +174,7 @@ liteparse/
 ├── data/
 │   ├── attention-is-all-you-need.pdf   # sample PDF
 │   └── handwritten.jpg                 # sample image for OCR
-├── output_parsed/
-│   └── attention-is-all-you-need.md    # example parsed output
-├── screenshots/
-│   ├── page_001.png
-│   └── page_002.png
 ├── liteparse-yt.ipynb                  # demo notebook
-├── hello.py
 ├── pyproject.toml
 ├── uv.lock
 └── README.md
