@@ -187,3 +187,10 @@ liteparse/
 - `result.text` returns the full document as a single string.
 - `result[n]` accesses the parsed content of page `n` (0-indexed).
 - When running in a Jupyter notebook, use `os.getcwd()` instead of `__file__` to get the working directory — `__file__` is not defined in notebook environments.
+
+---
+
+## Resources
+
+- [Vercel Skills Framework](https://github.com/vercel-labs/skills) — Learn about building and integrating skills with Claude Code
+- [LiteParse Documentation](https://developers.llamaindex.ai/liteparse/) — Official LiteParse documentation and API reference
