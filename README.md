@@ -13,20 +13,43 @@ A Python project demonstrating [LiteParse](https://pypi.org/project/liteparse/) 
 ## Requirements
 
 - Python >= 3.13
+- [uv](https://docs.astral.sh/uv/) (package manager)
 - [liteparse](https://pypi.org/project/liteparse/) >= 2.0.4
 - [Tesseract](https://github.com/tesseract-ocr/tesseract) *(optional, for OCR)*
 - [ImageMagick](https://imagemagick.org/) *(optional, for screenshot/image conversion)*
 
+## Quick Start
+
+Clone and set up the project:
+
+```bash
+git clone https://github.com/sudarshan-koirala/liteparse.git
+cd liteparse
+uv sync  # Install project and all dependencies
+```
+
+That's it! `uv sync` reads `pyproject.toml` and `uv.lock` and sets everything up.
+
+---
+
 ## Installation
 
-### With uv (recommended)
+### For this project (clone + setup)
 
+```bash
+git clone https://github.com/sudarshan-koirala/liteparse.git
+cd liteparse
+uv sync
+```
+
+### To add liteparse to another project
+
+With uv:
 ```bash
 uv add liteparse
 ```
 
-### With pip
-
+With pip:
 ```bash
 pip install liteparse
 ```
